@@ -5,6 +5,12 @@ const cors = require('cors');
 const categoriesRouter = require('./routes/categories');
 const gelVarnishesRouter = require('./routes/gelVarnishes');
 const nozzlesRouter = require('./routes/nozzles');
+const giftVouchersRouter = require('./routes/giftVouchers');
+const designRouter = require('./routes/design');
+const toolsRouter = require('./routes/tools');
+const liquidsRouter = require('./routes/liquids');
+const lampsRouter = require('./routes/lamps');
+const paintbrushesRouter = require('./routes/paintbrushes');
 const usersRouter = require('./routes/users');
 
 const app = express();
@@ -34,4 +40,10 @@ app.listen(port, async () => {
 app.use('/api/categories', categoriesRouter);
 app.use('/api/gelVarnishes', gelVarnishesRouter);
 app.use('/api/nozzles', nozzlesRouter);
+app.use('/api/giftVouchers', giftVouchersRouter);
+app.use('/api/design', designRouter);
+app.use('/api/tools', toolsRouter);
+app.use('/api/liquids', liquidsRouter);
+app.use('/api/lamps', lampsRouter);
+app.use('/api/paintbrushes', paintbrushesRouter);
 app.use('/api/users', usersRouter);
