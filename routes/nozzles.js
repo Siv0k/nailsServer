@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const GelVarnish = require('./models/GelVarnishes');
+const Nozzles = require('./models/nozzles');
 
 router.get('/', async (req, res) => {
     try {
-        const gelVarnishes = await GelVarnish.find({}, {_id: 0});
+        const nozzles = await Nozzles.find({}, {_id: 0});
 
-        if (gelVarnishes) {
-            res.json(gelVarnishes);
+        if (nozzles) {
+            res.json(nozzles);
         } else {
             res.json({});
         }

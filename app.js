@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const categoriesRouter = require('./routes/categories');
 const gelVarnishesRouter = require('./routes/gelVarnishes');
+const nozzlesRouter = require('./routes/nozzles');
 const usersRouter = require('./routes/users');
 
 const app = express();
@@ -32,4 +33,5 @@ app.listen(port, async () => {
 
 app.use('/api/categories', categoriesRouter);
 app.use('/api/gelVarnishes', gelVarnishesRouter);
+app.use('/api/nozzles', nozzlesRouter);
 app.use('/api/users', usersRouter);
